@@ -17,7 +17,7 @@ public class BankController {
   private static final Logger log = LoggerFactory.getLogger(
     BankController.class
   );
-  private List<AccountModel> accounts = new Int();
+  private List<AccountModel> accounts = new ArrayList<>();
 
   public BankController() {}
 
