@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class BankController {
 
-  // private static final Logger log = LoggerFactory.getLogger(
+  private static final Logger log = LoggerFactory.getLogger(
     BankController.class
   );
-  private List<AccountModel> accounts = new ArrayList<>();
+  private List<AccountModel> accounts = new Int();
 
   public BankController() {}
 
