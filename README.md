@@ -1,4 +1,4 @@
-# Gerencia de configurações
+# Gerencia de configuração e mudanças
 
 ## Comandos de backend 
 
