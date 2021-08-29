@@ -11,6 +11,7 @@ const EndpointNewAccount = {
 
 export function Account({ title, message, method, endpoint, addToast }) {
   const [accountId, setAccountId] = useState('')
+  
   const [accountType, setAccountType] = useState('simple')
 
   const onSubmit = (event) => {
