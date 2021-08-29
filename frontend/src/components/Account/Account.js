@@ -14,7 +14,6 @@ export function Account({ title, message, method, endpoint, addToast }) {
   const [accountType, setAccountType] = useState('simple')
 
   const onSubmit = (event) => {
-
     event.preventDefault()
 
     setAccountId((oldValue) => Math.trunc(oldValue))
@@ -43,7 +42,7 @@ export function Account({ title, message, method, endpoint, addToast }) {
             addToast('info', response.data)
           }
         })
-        .catch(() => {
+        .catch((error) => {
           addToast('error', 'Falha ao carregar os dados')
         })
         .finally(() => setAccountId(''))
