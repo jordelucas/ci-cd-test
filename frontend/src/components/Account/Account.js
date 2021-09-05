@@ -42,7 +42,7 @@ export function Account({ title, message, method, endpoint, addToast }) {
             addToast('info', response.data)
           }
         })
-        .catch((error) => {
+        .catch(() => {
           addToast('error', 'Falha ao carregar os dados')
         })
         .finally(() => setAccountId(''))
