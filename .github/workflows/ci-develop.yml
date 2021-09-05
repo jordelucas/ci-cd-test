@@ -54,4 +54,5 @@ jobs:
       run: yarn
 
     - name: Run Eslint
+      if: github.ref == 'refs/heads/release-**'
       run: yarn lint
