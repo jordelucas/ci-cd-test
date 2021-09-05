@@ -35,7 +35,6 @@ jobs:
       run: ./gradlew build
   
   build-frontend:
-    needs: build-backend
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -56,3 +55,8 @@ jobs:
     - name: Run Eslint
       if: github.ref == 'refs/heads/release-**'
       run: yarn lint
+
+  last:
+    needs: 
+      - build-backend
+      - build-frontend
