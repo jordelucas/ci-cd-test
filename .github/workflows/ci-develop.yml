@@ -53,23 +53,15 @@ jobs:
       run: yarn
 
     - name: Run Eslint
-      if: github.ref == 'refs/heads/release-**'
       run: yarn lint
 
-  last:
-    needs: 
-      - build-backend
-      - build-frontend
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: frontend
+  # generate-package:
+  #   needs: 
+  #     - build-backend
+  #     - build-frontend
+  #   runs-on: ubuntu-latest
 
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-
-    - name: Install Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: 12
+  #   steps:
+  #   - name: Generate
+  #     if: github.ref == 'refs/heads/release-**'
+  #     run: ...
